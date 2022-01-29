@@ -6,7 +6,7 @@
 /*   By: rjada <rjada@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 20:46:28 by rjada             #+#    #+#             */
-/*   Updated: 2022/01/28 23:30:47 by rjada            ###   ########.fr       */
+/*   Updated: 2022/01/29 14:53:47 by rjada            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static void	send_message(int pid, char *message)
 int	main(int argc, char **argv)
 {
 	struct sigaction	usr_action;
-	
+
 	if (argc != 3 || !is_valid_pid(argv[1]) || !ft_strlen(argv[2]))
 		ft_error(ERR_MSG);
 	ft_memset(&usr_action, 0, sizeof(usr_action));

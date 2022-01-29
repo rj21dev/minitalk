@@ -6,7 +6,7 @@
 /*   By: rjada <rjada@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 20:47:35 by rjada             #+#    #+#             */
-/*   Updated: 2022/01/28 22:22:17 by rjada            ###   ########.fr       */
+/*   Updated: 2022/01/29 14:53:08 by rjada            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	recieve_handle(int sig_id)
 {
 	static unsigned char	chr;
 	static int				bit;
-	
+
 	if (sig_id == SIGUSR2)
 		chr |= (1 << (7 - bit));
 	++bit;
@@ -33,9 +33,9 @@ static void	recieve_handle(int sig_id)
 
 int	main(int argc, char **argv)
 {
-	(void) argv;
 	struct sigaction	usr_action;
 
+	(void) argv;
 	if (argc > 1)
 		ft_error(ERR_MSG);
 	ft_memset(&usr_action, 0, sizeof(usr_action));

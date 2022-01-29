@@ -6,7 +6,7 @@
 /*   By: rjada <rjada@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 20:46:28 by rjada             #+#    #+#             */
-/*   Updated: 2022/01/28 22:41:38 by rjada            ###   ########.fr       */
+/*   Updated: 2022/01/29 15:01:57 by rjada            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static void	send_message(int pid, char *message)
 				kill(pid, SIGUSR2);
 			else
 				kill(pid, SIGUSR1);
-			usleep(200);
+			usleep(50);
 		}
 		++i;
 	}
@@ -49,7 +49,7 @@ static void	send_message(int pid, char *message)
 	while (bit--)
 	{
 		kill(pid, SIGUSR1);
-		usleep(200);
+		usleep(50);
 	}
 }
 
